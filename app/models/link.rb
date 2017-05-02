@@ -1,3 +1,4 @@
+require "dm-migrations"
 require "data_mapper"
 require "dm-postgres-adapter"
 
@@ -11,6 +12,6 @@ class Link
 
 end
 
-DataMapper.setup(:default, "postgres://localhost/bookmark_manager_test")
-DataMapper.finalize
-DataMapper.auto_upgrade!
+ DataMapper.setup(:default, "postgres://localhost/bookmark_manager_test")
+ DataMapper.finalize
+ DataMapper.auto_upgrade!
