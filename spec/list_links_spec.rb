@@ -1,6 +1,6 @@
-require './app'
+require './app/models/link'
 
-feature 'Viewing Links' do 
+feature 'Viewing Links' do
 
   scenario 'I can see existing links on the links page' do
     Link.create(url: 'http://makersacademy.com', title: 'Makers Academy')
@@ -14,7 +14,6 @@ feature 'Viewing Links' do
     end
   end
 end
-
 
 # Bookmarks (add(link), list, sort)
 # Links (create, add(tag))
