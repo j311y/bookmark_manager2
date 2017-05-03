@@ -8,4 +8,15 @@ require_relative "../app/models/link"
       @link = Link.all
       erb :links
     end
+
+    get '/links/new' do
+      erb :new
+    end
+
+    post '/links' do
+      @link = Link.create(title: params[:page_name], url: params[:page_url])
+      redirect '/links'
+    end
+
+
   end

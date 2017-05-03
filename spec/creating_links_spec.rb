@@ -6,7 +6,10 @@ feature 'creating links' do
     click_button('Create new link')
 
     expect(current_path).to eq '/links'
-    expect(page).to have_content('Google')
-    expect(page).to have_content('http://www.google.com')
+
+    within 'ul#links' do
+      expect(page).to have_content('Google')
+      expect(page).to have_content('http://www.google.com')
+    end
   end
 end
