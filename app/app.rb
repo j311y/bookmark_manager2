@@ -14,7 +14,7 @@ require_relative "../app/models/link"
     end
 
     post '/links' do
-      # @link = Link.create(title: params[:page_name], url: params[:page_url])
+      @link = Link.create(title: params[:page_name], url: params[:page_url])
       redirect '/links'
     end
 
