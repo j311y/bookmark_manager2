@@ -5,8 +5,7 @@ require_relative "../app/models/link"
   class BookmarkManager < Sinatra::Base
 
     get '/links' do
-      Link.all
-      Link.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
+      @link = Link.all
       erb :links
     end
   end

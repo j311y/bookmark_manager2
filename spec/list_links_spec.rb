@@ -14,7 +14,3 @@ feature 'Viewing Links' do
     end
   end
 end
-
-# Bookmarks (add(link), list, sort)
-# Links (create, add(tag))
-# Tags (create)
