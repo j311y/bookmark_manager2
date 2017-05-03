@@ -8,5 +8,4 @@ gem 'dm-migrations'
 gem 'rspec'
 gem 'capybara'
 gem 'sinatra'
-
-
+gem 'database_cleaner'
