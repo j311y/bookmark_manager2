@@ -6,6 +6,7 @@ require_relative "../app/models/link"
 
     get '/links' do
       Link.all
+      Link.create(title: 'Makers Academy', url: 'http://www.makersacademy.com')
       erb :links
     end
   end

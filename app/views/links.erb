@@ -1,1 +1,9 @@
-Makers Academy
+<!-- <ul>Makers Academy</ul> -->
+<ul id='links'>
+  <% @link.each do |link| =>
+    <li>
+      Title: <%= link.title %>
+      URL: <%= link.url %>
+    </li>
+  <% end %> 
+</ul>
