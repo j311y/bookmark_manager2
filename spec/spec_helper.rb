@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', 'app', 'app.rb')
 require File.join(File.dirname(__FILE__), '..', 'app', 'models', 'link.rb')
+require File.join(File.dirname(__FILE__), '..', 'app', 'models', 'tag.rb')
 require 'capybara/rspec'
 require 'database_cleaner'
 
@@ -31,7 +32,7 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
-  DatabaseCleaner.start 
+  DatabaseCleaner.start
   end
 
   config.after(:each) do
