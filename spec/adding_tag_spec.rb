@@ -3,15 +3,10 @@ feature 'Add single tag' do
     visit '/links/new'
     fill_in('page_name', with: 'Google')
     fill_in('page_url', with: 'http://www.google.com')
-    fill_in('tag', with: 'search')
+    fill_in('tags', with: 'search')
     click_button('Create new link')
 
-    expect(current_path).to eq '/links'
-
-    within 'ul#links' do
-      expect(page).to have_content('Google')
-      expect(page).to have_content('http://www.google.com')
-      expect(page).to have_content('search')
-    end
+    link = Link.first
+    expect(link.tags.map(&:name)).to include('search')
   end
 end
