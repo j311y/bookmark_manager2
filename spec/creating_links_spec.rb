@@ -5,7 +5,7 @@ feature 'creating links' do
     fill_in('page_url', with: 'http://www.google.com')
     click_button('Create new link')
 
-    expect(current_path).to eq '/links'
+    expect(current_path).to eq '/links/index'
 
     within 'ul#links' do
       expect(page).to have_content('Google')
