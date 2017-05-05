@@ -16,8 +16,9 @@ require_relative 'data_mapper_setup'
     post '/links/index' do
       link = Link.new(title: params[:page_name],
                       url: params[:page_url])
-      tag = Tag.first_or_create(name: params[:tags])
-      link.tags << tag
+      params[:tags].split.each do |tag|
+              link.tags << Tag.first_or_create(name: tag)
+      end
       link.save
       redirect '/links/index'
     end
