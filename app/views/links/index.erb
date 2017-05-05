@@ -1,6 +1,9 @@
 <h1> Links </h1>
 
-<!-- Welcome <%= @user.email %> -->
+<% if current_user %>
+Welcome <%= current_user.email %>
+<% end %>
+
 <ul id='links'>
   <% @link.each do |link| %>
     <li>
