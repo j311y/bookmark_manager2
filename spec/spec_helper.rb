@@ -2,6 +2,7 @@ ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', 'app', 'app.rb')
 require File.join(File.dirname(__FILE__), '..', 'app', 'models', 'link.rb')
 require File.join(File.dirname(__FILE__), '..', 'app', 'models', 'tag.rb')
+require File.join(File.dirname(__FILE__), '..', 'app', 'models', 'user.rb')
 require_relative 'web_helpers.rb'
 require 'capybara/rspec'
 require 'database_cleaner'
