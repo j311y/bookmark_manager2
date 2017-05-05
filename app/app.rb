@@ -43,7 +43,7 @@ require_relative 'data_mapper_setup'
     end
 
     post '/sign_in' do
-      user = User.create(email: params[:email], password: params[:password])
+    user = User.create(email: params[:email], password: params[:password])
       session[:user_id] = user.id
       redirect '/links/index'
     end
